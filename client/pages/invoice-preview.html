@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Preview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/invoice-preview.css">
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="invoice-header">
+            <div>
+                <h1>ERP Billing Software</h1>
+                <p class="invoice-subtitle" id="invoiceType">
+                    Invoice
+                </p>
+            </div>
+            <button id="printInvoiceBtn">
+                Print Invoice
+            </button>
+        </div>
+        <div class="invoice-card">
+            <div class="invoice-info">
+                <div class="invoice-row">
+                    <div>
+                        <strong>Invoice Number</strong>
+                        <p id="previewInvoiceNumber"></p>
+                    </div>
+                    <div>
+                        <strong>Invoice Date</strong>
+                        <p id="previewInvoiceDate"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="customer-section">
+                <h3>Customer Details</h3>
+                <div class="customer-details">
+
+<p>
+<strong>Name:</strong>
+<span id="previewCustomerName"></span>
+</p>
+
+<p>
+<strong>Mobile:</strong>
+<span id="previewCustomerMobile"></span>
+</p>
+
+<p>
+<strong>GST Number:</strong>
+<span id="previewGSTNumber"></span>
+</p>
+
+<p>
+<strong>Address:</strong>
+<span id="previewAddress"></span>
+</p>
+
+<p>
+<strong>Payment Method:</strong>
+<span id="previewPaymentMethod"></span>
+</p>
+
+<p>
+<strong>Status:</strong>
+<span id="previewInvoiceStatus"></span>
+</p>
+
+</div>
+            </div>
+            <div class="table-wrapper">
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Qty</th>
+                        <th>Rate</th>
+                        <th>GST</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody id="invoiceTableBody">
+
+                </tbody>
+            </table>
+            </div>
+            <div class="invoice-summary">
+                <p>
+                    Subtotal :
+                    <span id="previewSubtotal"></span>
+                </p>
+                <p>
+                    GST :
+                    <span id="previewGST"></span>
+                </p>
+                <p>
+                    Total :
+                    <span id="previewTotal"></span>
+                </p>
+            </div>
+            <div class="signature-section">
+                <div class="signature-box">
+                    Authorized Signature
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/invoice-preview.js"></script>
+</body>
+</html>

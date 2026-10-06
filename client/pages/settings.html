@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | ERP Billing Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/settings.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar">
+        <button class="close-sidebar" id="closeSidebar">
+                ❮
+            </button>
+        <div class="sidebar-logo">
+            <h2>ERP Billing</h2>
+
+            <p class="logo-tagline">
+                Admin Panel
+            </p>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="./admin-dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                    <a href="category.html">
+                        Category
+                    </a>
+                </li>
+            <li>
+                <a href="./inventory.html">Add Products</a>
+            </li>
+
+            <li>
+                <a href="./sales.html">Sales</a>
+            </li>
+
+            <li>
+                <a href="./purchase.html">Purchase</a>
+            </li>
+
+            <li>
+                <a href="./customers.html">Customers</a>
+            </li>
+
+            <li>
+                <a href="./vendors.html">Vendors</a>
+            </li>
+
+            <li>
+                <a href="./reports.html">Reports</a>
+            </li>
+            <li>
+                    <a href="./expenses.html">
+                        Expenses
+                    </a>
+                </li>
+            <li class="active-menu">
+                <a href="./settings.html">Settings</a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <button class="mobile-menu-btn" id="menuBtn">
+            ☰ 
+        </button>
+
+        <div class="settings-container">
+        <div class="settings-header">
+            <h1>Settings</h1>
+            <p>
+                Manage business information, invoice preferences and account settings.
+            </p>
+        </div>
+        <div class="settings-card">
+            <h2>Business Information</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Company Name</label>
+                    <input
+id="companyName"
+type="text"
+placeholder="Company name">
+                </div>
+                <div class="input-group">
+                    <label>Business Email</label>
+                    <input
+id="businessEmail"
+type="email"
+placeholder="Business email">
+                </div>
+                <div class="input-group">
+                    <label>Contact Number</label>
+                    <input
+id="businessPhone"
+type="tel"
+placeholder="Contact number">
+                </div>
+                <div class="input-group">
+                    <label>GST Number</label>
+                    <input
+id="gstNumber"
+type="text"
+placeholder="GST number">
+                </div>
+                <div class="input-group">
+                    <label>Business Address</label>
+                    <input
+id="businessAddress"
+type="text"
+placeholder="Business address">
+                </div>
+                <div class="input-group">
+                    <label>Website URL</label>
+                   <input
+id="website"
+type="text"
+placeholder="Website URL">
+                </div>
+                <div class="input-group">
+                    <label>Company Logo</label>
+                    <input type="file">
+                </div>
+            </div>
+        </div>
+        <div class="settings-card">
+            <h2>Invoice Preferences</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Invoice Prefix</label>
+                   <input
+id="invoicePrefix"
+type="text"
+placeholder="INV">
+                </div>
+                <div class="input-group">
+                    <label>Currency</label>
+                    <input
+id="currency"
+type="text"
+placeholder="INR">
+                </div>
+                <div class="input-group">
+                    <label>Financial Year</label>
+                    <input
+id="financialYear"
+type="text"
+placeholder="2025-2026">
+                </div>
+                <div class="input-group">
+                    <label>Default GST Rate</label>
+                    <input
+id="defaultGST"
+type="number"
+placeholder="18">
+                </div>
+                <div class="input-group">
+    <label>Invoice Theme</label>
+
+    <select id="invoiceTheme">
+        <option>Classic</option>
+        <option>Modern</option>
+        <option>Professional</option>
+    </select>
+</div>
+            </div>
+        </div>
+        <div class="settings-card">
+
+    <h2>Notification Settings</h2>
+
+    <div class="form-grid">
+
+        <div class="input-group">
+            <label>Email Notifications</label>
+
+            <select>
+                <option>Enabled</option>
+                <option>Disabled</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Stock Alerts</label>
+
+            <select>
+                <option>Enabled</option>
+                <option>Disabled</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label>WhatsApp Notifications</label>
+            <select>
+                <option>Enabled</option>
+                <option>Disabled</option>
+            </select>
+        </div>
+    </div>
+
+</div>
+<div class="settings-card">
+
+    <h2>Backup Settings</h2>
+
+    <div class="form-grid">
+
+        <div class="input-group">
+            <label>Auto Backup</label>
+
+            <select>
+                <option>Enabled</option>
+                <option>Disabled</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Backup Frequency</label>
+
+            <select>
+                <option>Daily</option>
+                <option>Weekly</option>
+                <option>Monthly</option>
+            </select>
+        </div>
+
+    </div>
+
+</div>
+        <div class="settings-card">
+            <h2>Account Settings</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>New Password</label>
+                    <input type="password" placeholder="New password">
+                </div>
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Confirm password">
+                </div>
+            </div>
+        </div>
+        <button
+type="button"
+id="saveSettingsBtn"
+class="save-btn">
+            Save Settings
+        </button>
+    </div>
+    </main>
+    </div>
+    <script src="../scripts/dashboard.js"></script>
+    <script src="../scripts/settings.js"></script>
+</body>
+</html>

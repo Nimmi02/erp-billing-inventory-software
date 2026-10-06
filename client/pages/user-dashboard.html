@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | ERP Billing Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/user-dashboard.css">
+</head>
+<body>
+    <div class="user-layout">
+        <header class="user-header">
+            <div class="user-logo">
+                ERP Billing
+            </div>
+            <div class="user-actions">
+                <span class="user-name">
+                    Welcome User
+                </span>
+                <button class="logout-btn" id="logoutBtn">
+                    Logout
+                </button>
+            </div>
+        </header>
+        <main class="user-main">
+            <section class="user-welcome">
+                <h1>My Dashboard</h1>
+                <p>
+                    Manage your invoices, payments and account information.
+                </p>
+            </section>
+            <section class="user-cards">
+                <div class="user-card">
+                    <h4>My Bills</h4>
+                    <h2>0</h2>
+                    <p>No invoices available</p>
+                </div>
+                <div class="user-card">
+                    <h4>Payments</h4>
+                    <h2>₹0</h2>
+                    <p>No payments recorded</p>
+                </div>
+                <div class="user-card">
+                    <h4>Transactions</h4>
+                    <h2>0</h2>
+                    <p>No transaction history</p>
+                </div>
+            </section>
+            <section class="account-section">
+                <div class="account-card">
+                    <h3>Account Information</h3>
+                    <div class="account-row">
+                        <span>Name</span>
+                        <span>Not Available</span>
+                    </div>
+                    <div class="account-row">
+                        <span>Email</span>
+                        <span>Not Available</span>
+                    </div>
+                    <div class="account-row">
+                        <span>Mobile</span>
+                        <span>Not Available</span>
+                    </div>
+                </div>
+            </section>
+            <section class="transaction-section">
+                <div class="transaction-card">
+                    <h3>Recent Transactions</h3>
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Reference</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                No transaction records available.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div> 
+    <script src="../scripts/dashboard.js"></script>
+</body>
+</html>

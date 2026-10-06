@@ -1,0 +1,86 @@
+@import url("./inventory.css");
+
+.expenses-container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.expenses-header{
+    margin-bottom:30px;
+}
+
+.expenses-header h1{
+    font-size:32px;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.expenses-header p{
+    color:#64748b;
+}
+
+.expenses-card{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.expenses-card h2{
+    margin-bottom:20px;
+}
+
+.save-btn{
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+.expenses-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.expenses-table th,
+.expenses-table td{
+    padding:14px;
+    border-bottom:1px solid #e2e8f0;
+    text-align:left;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid #e2e8f0;
+}
+
+@media(max-width:768px){
+
+    .expenses-container{
+        padding:20px 10px;
+    }
+
+    .expenses-header h1{
+        font-size:24px;
+    }
+
+    .expenses-card{
+        padding:15px;
+    }
+
+    .expenses-table{
+        display:block;
+        overflow-x:auto;
+    }
+
+    .save-btn{
+        width:100%;
+    }
+}

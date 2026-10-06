@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Management | ERP Billing Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/billing.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <h2>ERP Billing</h2>
+                <p class="logo-tagline">
+                    Admin Panel
+                </p>
+            </div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="./admin-dashboard.html">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="active-menu">
+                    <a href="./billing.html">
+                        Billing
+                    </a>
+                </li>
+                <li>
+                    <a href="./inventory.html">
+                        Inventory
+                    </a>
+                </li>
+                <li>
+                    <a href="./sales.html">
+                        Sales
+                    </a>
+                </li>
+                <li>
+                    <a href="./purchase.html">
+                        Purchase
+                    </a>
+                </li>
+                <li>
+                    <a href="./customers.html">
+                        Customers
+                    </a>
+                </li>
+                <li>
+                    <a href="./vendors.html">
+                        Vendors
+                    </a>
+                </li>
+                <li>
+                    <a href="./reports.html">
+                        Reports
+                    </a>
+                </li>
+                <li>
+                    <a href="./settings.html">
+                        Settings
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <button class="mobile-menu-btn" id="menuBtn">
+                ☰ Menu
+            </button>
+            <div class="billing-container">
+                <div class="billing-header">
+                    <h1>Billing Management</h1>
+                    <p>
+                        Create invoices and manage customer billing information.
+                    </p>
+                </div>
+                <div class="billing-card">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Customer Name</label>
+                            <input type="text" id="customerName" placeholder="Enter customer name">
+                        </div>
+                        <div class="input-group">
+                            <label>Invoice Number</label>
+                            <input type="text" id="invoiceNumber" placeholder="Invoice Number">
+                        </div>
+                        <div class="input-group">
+                            <label>Invoice Date</label>
+                            <input type="date" id="invoiceDate">
+                        </div>
+                        <div class="input-group">
+                            <label>Mobile Number</label>
+                            <input type="tel" id="customerMobile" placeholder="Customer mobile number">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>GST Number</label>
+                        <input type="text" id="gstNumber"  placeholder="Customer GST number">
+                    </div>
+                    <div class="input-group">
+                        <label>Customer Address</label>
+                        <input type="text" id="customerAddress" placeholder="Customer address">
+                </div>
+                <div class="input-group">
+                    <label>Payment Method</label>
+                    <select id="paymentMethod">
+                        <option>Cash</option>
+                        <option>UPI</option>
+                        <option>Card</option>
+                        <option>Bank Transfer</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Invoice Status</label>
+                    <select id="invoiceStatus">
+                        <option>Draft</option>
+                        <option>Paid</option>
+                        <option>Pending</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Billing Type</label>
+                    <select id="billingType">
+                        <option>GST Invoice</option>
+                        <option>Quotation</option>
+                        <option>POS Billing</option>
+                        <option>Return Invoice</option>
+                    </select>
+                </div>
+                </div>
+                <div class="billing-card">
+                    <h2>Product Information</h2>
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Qty</th>
+                                <th>Rate</th>
+                                <th>GST</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productTableBody">
+                            <tr id="emptyRow">
+                                <td colspan="5">
+                                    No products added.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="input-group">
+                        <label>Barcode / SKU</label>
+                        <input type="text" id="barcode" placeholder="Scan barcode or enter SKU">
+                    </div>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>Product Name</label>
+                            <input type="text" id="productName" placeholder="Enter product">
+                        </div>
+                        <div class="input-group">
+                            <label>Quantity</label>
+                            <input type="number" id="quantity" placeholder="Quantity">
+                        </div>
+                        <div class="input-group">
+                            <label>Rate</label>
+                            <input type="number" id="rate" placeholder="Product rate">
+                        </div>
+                        <div class="input-group">
+                            <label>GST (%)</label>
+                            <input type="number" id="gst" placeholder="GST">
+                        </div>
+                    </div>
+                </div>
+                <div class="billing-card">
+                    <div class="input-group">
+                        <label>Discount (%)</label>
+                        <input type="number" placeholder="Enter discount">
+                    </div>
+                    <h2>Invoice Summary</h2>
+                    <div class="summary-row">
+                        <span>Discount</span>
+                        <span>₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotalAmount">₹0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>GST Amount</span>
+                        <span id="gstAmount">₹0</span>
+                    </div>
+                    <div class="summary-row total-row">
+                        <span>Total Amount</span>
+                        <span id="totalAmount">₹0</span>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button class="secondary-btn" id="addItemBtn">
+                        Add Item
+                    </button>
+                    <button class="primary-btn" id="generateInvoiceBtn">
+                        Generate Invoice
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script src="../scripts/billing.js"></script>
+<script src="../scripts/dashboard.js"></script>
+</body>
+</html>

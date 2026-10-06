@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Management | ERP Billing & Inventory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/expenses.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar">
+
+        <button class="close-sidebar" id="closeSidebar">
+            ❮
+        </button>
+
+        <div class="sidebar-logo">
+            <h2>ERP Billing</h2>
+            <p class="logo-tagline">
+                Admin Panel
+            </p>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="./admin-dashboard.html">Dashboard</a>
+            </li>
+
+            <li>
+                <a href="./category.html">Category</a>
+            </li>
+
+            <li>
+                <a href="./inventory.html">Add Products</a>
+            </li>
+
+            <li>
+                <a href="./sales.html">Sales</a>
+            </li>
+
+            <li>
+                <a href="./purchase.html">Purchase</a>
+            </li>
+
+            <li>
+                <a href="./customers.html">Customers</a>
+            </li>
+
+            <li>
+                <a href="./vendors.html">Vendors</a>
+            </li>
+
+            <li>
+                <a href="./reports.html">Reports</a>
+            </li>
+
+            <li class="active-menu">
+                <a href="./expenses.html">Expenses</a>
+            </li>
+
+            <li>
+                <a href="./settings.html">Settings</a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <button class="mobile-menu-btn" id="menuBtn">
+            ☰ 
+        </button>
+
+        <div class="expenses-container">
+
+            <div class="expenses-header">
+
+                <h1>Expenses Management</h1>
+
+                <p>
+                    Track business expenses and spending records.
+                </p>
+
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <h3>Today's Expenses</h3>
+<span id="todayExpense">₹0</span>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Monthly Expenses</h3>
+<span id="monthlyExpense">₹0</span>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Total Expenses</h3>
+<span id="totalExpense">₹0</span>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Highest Expense</h3>
+<span id="highestExpense">₹0</span>
+                </div>
+
+            </div>
+
+            <div class="expenses-card">
+
+                <h2>Add Expense</h2>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label>Expense Name</label>
+                        <input
+id="expenseName"
+type="text"
+placeholder="Expense name">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Expense Category</label>
+
+                        <select id="category">
+                            <option>Electricity</option>
+                            <option>Internet</option>
+                            <option>Rent</option>
+                            <option>Transport</option>
+                            <option>Salary</option>
+                            <option>Office Supplies</option>
+                            <option>Miscellaneous</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Amount</label>
+                        <input
+id="amount"
+type="number"
+placeholder="Expense amount">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Date</label>
+
+<input
+id="expenseDate"
+type="date">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Payment Method</label>
+
+                        <select id="paymentMethod">
+                            <option>Cash</option>
+                            <option>UPI</option>
+                            <option>Bank Transfer</option>
+                            <option>Card</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Description</label>
+                        <input
+id="notes"
+type="text"
+placeholder="Expense details">
+                    </div>
+
+                </div>
+
+                <button
+type="button"
+id="saveExpenseBtn"
+class="save-btn">
+                    Save Expense
+                </button>
+
+            </div>
+
+            <div class="expenses-card">
+
+                <h2>Expense Records</h2>
+
+                <table class="expenses-table">
+
+<thead>
+
+<tr>
+
+<th>Expense</th>
+<th>Category</th>
+<th>Amount</th>
+<th>Date</th>
+<th>Payment</th>
+
+</tr>
+
+</thead>
+
+<tbody id="expenseTable">
+
+</tbody>
+
+                    
+                </table>
+
+            </div>
+
+            <div class="expenses-card">
+
+                <h2>Expense Summary</h2>
+
+                <div class="summary-row">
+                    <span>Total Expenses</span>
+                    <span id="summaryTotalExpense">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Monthly Expenses</span>
+                    <span id="summaryMonthlyExpense">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Cash Expenses</span>
+                    <span id="cashExpense">₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Online Expenses</span>
+                    <span id="onlineExpense">₹0</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../scripts/dashboard.js"></script>
+<script src="../scripts/expenses.js"></script>
+</body>
+</html>

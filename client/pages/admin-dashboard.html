@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ERP Billing Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        <aside class="sidebar">
+            <button class="close-sidebar" id="closeSidebar">
+                ❮
+            </button>
+            <div class="sidebar-logo">
+                <h2>ERP Billing</h2>
+                <p class="logo-tagline">
+                    Admin Panel
+                </p>
+            </div>
+            <ul class="sidebar-menu">
+
+            <li class="active-menu">
+                <a href="./admin-dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+<li>
+                    <a href="category.html">
+                        Category
+                    </a>
+                </li>
+            <li>
+                <a href="./inventory.html">
+                    Add Products
+                </a>
+            </li>
+
+            <li>
+                <a href="./sales.html">
+                    Sales
+                </a>
+            </li>
+
+            <li>
+                <a href="./purchase.html">
+                    Purchase
+                </a>
+            </li>
+
+            <li>
+                <a href="./customers.html">
+                    Customers
+                </a>
+            </li>
+
+            <li>
+                <a href="./vendors.html">
+                    Vendors
+                </a>
+            </li>
+
+            <li>
+                <a href="./reports.html">
+                    Reports
+                </a>
+            </li>
+            <li>
+                    <a href="./expenses.html">
+                        Expenses
+                    </a>
+                </li>
+            <li>
+                <a href="./settings.html">
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        </aside>
+        <main class="main-content">
+            <button class="mobile-menu-btn" id="menuBtn">
+                ☰
+            </button>
+            <header class="top-header">
+                <div class="search-box">
+                    <input type="text" placeholder="Search billing, inventory or reports">
+                </div>
+                <div class="header-right">
+                    <button class="notification-btn">
+                        🔔
+                    </button>
+                    <div class="profile-box">
+                        Admin
+                    </div>
+                    <button class="logout-btn" id="logoutBtn">
+                        Logout
+                    </button>
+                </div>
+            </header>
+            <section class="dashboard-welcome">
+                <h1>
+                    Dashboard Overview
+                </h1>
+                <p>
+                    Monitor billing, inventory, purchases,
+                    sales and accounting operations from
+                    a single workspace.
+                </p>
+            </section>
+            <section class="dashboard-cards">
+                <div class="card">
+                    <h4>Today's Sales</h4>
+                    <h2 id="todaySales">₹0</h2>
+                    <p class="card-status">
+                        Waiting for transactions
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Monthly Sales</h4>
+                    <h2 id="monthlySales">₹0</h2>
+                    <p class="card-status">
+                        No sales data available
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Profit/Loss</h4>
+                    <h2 id="profit">₹0</h2>
+                    <p class="card-status">
+                        Calculated from completed sales
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Expenses</h4>
+                    <h2 id="expense">₹0</h2>
+                    <p class="card-status">
+                        No expense records found
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Purchase Amount</h4>
+                    <h2 id="purchaseAmount">₹0</h2>
+                    <p class="card-status">
+                        No purchase records found
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Total Customers</h4>
+                    <h2 id="customerCount">0</h2>
+                    <p class="card-status">
+                        No customers added
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Total Vendors</h4>
+                    <h2 id="vendorCount">0</h2>
+                    <p class="card-status">
+                        No vendors added
+                    </p>
+                </div>
+                <div class="card">
+                    <h4>Stock Value</h4>
+                    <h2 id="stockValue">₹0</h2>
+                    <p class="card-status">
+                        Inventory valuation unavailable
+                    </p>
+                </div>
+            </section>
+            <section class="dashboard-summary">
+                <div class="summary-card">
+                    <h3>Monthly Business Summary</h3>
+                    <div class="summary-grid">
+                        <div>
+                            <span>Sales</span>
+                            <h4 id="summarySales">₹0</h4>
+                        </div>
+                        <div>
+                            <span>Purchases</span>
+                            <h4 id="summaryPurchase">₹0</h4>
+                        </div>
+                        <div>
+                            <span>Profit</span>
+                            <h4 id="summaryProfit">₹0</h4>
+                        </div>
+                        <div>
+                            <span>Expenses</span>
+                            <h4 id="summaryExpense">₹0</h4>
+                        </div>
+                        <div>
+                            <span>Monthly Reports</span>
+                            <h4 id="summaryReports">0</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="notification-section">
+                <div class="notification-card">
+
+<h3>Notifications</h3>
+
+<div
+class="notification-item"
+id="lowStockNotification">
+
+Low Stock Alert :
+No low stock items found
+
+</div>
+
+<div
+class="notification-item"
+id="expiryNotification">
+
+Expiring Products :
+No expiring products
+
+</div>
+
+<div
+class="notification-item"
+id="paymentNotification">
+
+Pending Payments :
+No pending invoices
+
+</div>
+
+<div
+class="notification-item"
+id="backupNotification">
+
+Backup Status :
+Last backup not available
+
+</div>
+
+</div>
+            </section>
+            <section class="business-insights">
+                <div class="insight-card">
+                    <h3>Business Insights</h3>
+                    <div class="insight-grid">
+                        <div class="insight-box">
+                            <span>Top Product</span>
+                            <h4 id="topProduct">No Data</h4>
+                        </div>
+                        <div class="insight-box">
+                            <span>Top Customer</span>
+                            <h4 id="topCustomer">No Data</h4>
+                        </div>
+                        <div class="insight-box">
+                            <span>Top Vendor</span>
+                            <h4 id="topVendor">No Data</h4>
+                        </div>
+                        <div class="insight-box">
+                            <span>Fast Moving Item</span>
+                            <h4 id="fastMoving">No Data</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dashboard-chart">
+                <div class="chart-card">
+                    <h3>Monthly Sales Trend</h3>
+                    <div class="chart-placeholder">
+                        Chart Integration Coming Soon
+                    </div>
+                </div>
+            </section>
+            <section class="dashboard-chart">
+                <div class="chart-card">
+                    <h3>Profit / Loss Analysis</h3>
+                    <div class="chart-placeholder">
+                        Profit & Loss Graph Area
+                    </div>
+                </div>
+            </section>
+            <section class="dashboard-table">
+                <div class="table-card">
+                    <div class="table-wrapper">
+                    <h3>Recent Activities</h3>
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Activity</th>
+                            <th>Status</th>
+                        </tr>
+                        <tbody id="activityTableBody">
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="../scripts/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fafc;
+}
+
+.user-header{
+    background:#ffffff;
+    border-bottom:1px solid #e2e8f0;
+    padding:18px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.user-logo{
+    font-size:22px;
+    font-weight:600;
+    color:#2563eb;
+}
+
+.user-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.user-name{
+    color:#475569;
+}
+
+.logout-btn{
+    border:none;
+    background:#ef4444;
+    color:white;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.user-main{
+    padding:30px;
+}
+
+.user-welcome{
+    margin-bottom:25px;
+}
+
+.user-welcome h1{
+    font-size:30px;
+    margin-bottom:8px;
+    color:#0f172a;
+}
+
+.user-welcome p{
+    color:#64748b;
+}
+
+.user-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.user-card{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:24px;
+}
+
+.user-card h4{
+    color:#64748b;
+    margin-bottom:10px;
+}
+
+.user-card h2{
+    margin-bottom:8px;
+}
+
+.user-card p{
+    color:#64748b;
+    font-size:14px;
+}
+
+.account-card,
+.transaction-card{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:25px;
+    margin-top:25px;
+}
+
+.account-row{
+    display:flex;
+    justify-content:space-between;
+    padding:14px 0;
+    border-bottom:1px solid #e2e8f0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table th,
+table td{
+    text-align:left;
+    padding:15px;
+    border-bottom:1px solid #e2e8f0;
+}
+
+@media(max-width:768px){
+
+    .user-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .user-main{
+        padding:20px;
+    }
+
+}

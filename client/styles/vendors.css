@@ -1,0 +1,264 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fafc;
+}
+.dashboard-layout{
+    display:flex;
+    min-height:100vh;
+}
+.mobile-menu-btn{
+    display:none;
+}
+.sidebar{
+    width:240px;
+    background:#ffffff;
+    color:#334155;
+    padding:25px;
+    border-right:1px solid #e2e8f0;
+    transition:0.3s ease;
+    overflow-y:auto;
+}
+
+.sidebar-logo{
+    margin-bottom:40px;
+}
+
+.logo-tagline{
+    font-size:13px;
+    color:#94a3b8;
+}
+
+.sidebar-menu{
+    list-style:none;
+}
+
+.sidebar-menu li{
+    padding:14px;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.sidebar-menu li:hover{
+    background:#f1f5f9;
+}
+
+.sidebar-menu a{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.active-menu{
+    background:#eff6ff;
+    color:#2563eb;
+    font-weight:600;
+}
+.main-content{
+    flex:1;
+    min-width:0;
+    overflow-x:hidden;
+}
+.vendors-container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.vendors-header{
+    margin-bottom:30px;
+}
+
+.vendors-header h1{
+    font-size:32px;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.vendors-header p{
+    color:#64748b;
+}
+
+.vendors-card{
+    background:#ffffff;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:25px;
+    margin-bottom:25px;
+}
+
+.vendors-card h2{
+    margin-bottom:20px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.input-group label{
+    margin-bottom:8px;
+}
+.close-sidebar{
+    display:none;
+}
+.input-group input{
+     width:100%;
+    max-width:100%;
+    height:48px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    padding:0 15px;
+}
+.input-group select{
+    width:100%;
+    max-width:100%;
+    height:48px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    padding:0 15px;
+    background:white;
+}
+.vendors-table{
+    width:100%;
+    min-width:750px;
+    border-collapse:collapse;
+}
+
+.vendors-table th,
+.vendors-table td{
+    padding:14px;
+    border-bottom:1px solid #e2e8f0;
+    text-align:left;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.save-btn{
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 24px;
+    border-radius:8px;
+    cursor:pointer;
+}
+.button-wrapper{
+    margin-top:25px;
+    display:flex;
+    justify-content:flex-end;
+}
+@media(max-width:768px){
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+    .close-sidebar{
+    display:block;
+    border:none;
+    background:#ef4444;
+    color:white;
+    width:40px;
+    height:40px;
+    border-radius:8px;
+    margin-bottom:20px;
+    cursor:pointer;
+}
+}
+@media(max-width:768px){
+
+    .mobile-menu-btn{
+        display:block;
+        border:none;
+        background:#2563eb;
+        color:white;
+        padding:10px 14px;
+        border-radius:8px;
+        cursor:pointer;
+        font-size:18px;
+        margin-bottom:15px;
+        position:sticky;
+        top:10px;
+        z-index:900;
+    }
+
+    .sidebar{
+        position:fixed;
+        left:-260px;
+        top:0;
+        width:240px;
+        height:100vh;
+        background:#ffffff;
+        z-index:1000;
+        box-shadow:0 0 20px rgba(0,0,0,0.15);
+    }
+
+    .sidebar.active{
+        left:0;
+    }
+
+    .main-content{
+        padding:15px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+}
+.table-wrapper{
+    width:100%;
+    overflow-x:auto;
+}
+@media(max-width:768px){
+
+    .vendors-container{
+        padding:20px 10px;
+    }
+
+    .vendors-header h1{
+        font-size:24px;
+    }
+
+    .vendors-card{
+        padding:15px;
+        overflow:hidden;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr !important;
+        gap:15px;
+    }
+
+    .input-group input,
+    .input-group select{
+        width:100%;
+        max-width:100%;
+    }
+
+    .button-wrapper{
+        justify-content:center;
+    }
+
+    .save-btn{
+        width:100%;
+    }
+
+    .summary-row{
+        font-size:14px;
+    }
+}

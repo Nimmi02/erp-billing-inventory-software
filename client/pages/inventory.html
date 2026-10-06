@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management | ERP Billing Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/inventory.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar">
+        <button class="close-sidebar" id="closeSidebar">
+                ❮
+            </button>
+        <div class="sidebar-logo">
+            <h2>ERP Billing</h2>
+            <p class="logo-tagline">
+                Admin Panel
+            </p>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="./admin-dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+<li>
+                    <a href="category.html">
+                        Category
+                    </a>
+                </li>
+            <li class="active-menu">
+                <a href="./inventory.html">
+                    Add Products
+                </a>
+            </li>
+
+            <li>
+                <a href="./sales.html">
+                    Sales
+                </a>
+            </li>
+
+            <li>
+                <a href="./purchase.html">
+                    Purchase
+                </a>
+            </li>
+
+            <li>
+                <a href="./customers.html">
+                    Customers
+                </a>
+            </li>
+
+            <li>
+                <a href="./vendors.html">
+                    Vendors
+                </a>
+            </li>
+
+            <li>
+                <a href="./reports.html">
+                    Reports
+                </a>
+            </li>
+            <li>
+                    <a href="./expenses.html">
+                        Expenses
+                    </a>
+                </li>
+            <li>
+                <a href="./settings.html">
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+        <div class="top-header">
+
+    <div class="header-search">
+        <input
+            type="text"
+            placeholder="Search products, invoices, customers..."
+        >
+    </div>
+
+    <div class="header-actions">
+
+        <button class="notification-btn">
+            🔔
+        </button>
+        <div class="profile-info">
+    <div class="profile-box">
+        A
+    </div>
+
+    <div class="profile-text">
+        <span>Admin</span>
+    </div>
+</div>
+
+    </div>
+
+</div>
+        <button class="mobile-menu-btn" id="menuBtn">
+            ☰
+        </button>
+        <div class="inventory-container">
+        
+        <div class="inventory-header">
+            <h1>Add Products</h1>
+            <p>
+                Manage products, stock quantity and inventory records.
+            </p>
+        </div>
+        <div class="stats-grid">
+
+    <div class="stat-card">
+        <h3>Total Products</h3>
+        <span id="totalProducts">0</span>
+    </div>
+
+    <div class="stat-card">
+        <h3>Low Stock</h3>
+        <span id="lowStock">0</span>
+    </div>
+
+    <div class="stat-card">
+        <h3>Out Of Stock</h3>
+        <span id="outOfStock">0</span>
+    </div>
+
+    <div class="stat-card">
+        <h3>Inventory Value</h3>
+        <span id="inventoryValue">₹0</span>
+    </div>
+
+</div>
+        <div class="inventory-card">
+            <h2>Add Product</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Product Name</label>
+                    <input id="productName" type="text" placeholder="Enter product name">
+                </div>
+                <div class="input-group">
+<label>Category</label>
+
+<select id="category">
+
+<option value="">Select Category</option>
+
+<option>Electronics</option>
+
+<option>Groceries</option>
+
+<option>Clothing</option>
+
+<option>Furniture</option>
+
+<option>Medical</option>
+
+<option>Stationery</option>
+<option>Automotive</option>
+<option>Sports</option>
+<option>Other</option>
+</select>
+
+</div>
+                <div class="input-group">
+                    <label>Stock Quantity</label>
+                    <input id="stock" type="number" placeholder="Available stock">
+                </div>
+                <div class="input-group">
+                    <label>Purchase Price</label>
+                    <input id="purchasePrice" type="number" placeholder="Purchase price">
+                </div>
+                <div class="input-group">
+    <label>Selling Price</label>
+    <input id="sellingPrice" type="number" placeholder="Selling price">
+</div>
+                <div class="input-group">
+    <label>Barcode</label>
+    <input id="productCode" type="text" placeholder="Product barcode">
+</div>
+
+<div class="input-group">
+    <label>Warehouse</label>
+    <input type="text" placeholder="Warehouse location">
+</div>
+
+<div class="input-group">
+    <label>Batch Number</label>
+    <input type="text" placeholder="Batch number">
+</div>
+
+<div class="input-group">
+    <label>Expiry Date</label>
+    <input type="date">
+</div>
+
+<div class="input-group">
+    <label>Low Stock Alert</label>
+    <input type="number" placeholder="Minimum stock quantity">
+</div>
+<div class="input-group">
+    <label>Product Status</label>
+
+    <select>
+        <option>Active</option>
+        <option>Out of Stock</option>
+        <option>Discontinued</option>
+    </select>
+</div>
+<div class="btn-wrapper">
+    <button type="button" id="saveProductBtn" class="primary-btn">
+        Save Product
+    </button>
+</div>
+            </div>
+        </div>
+        <div class="inventory-card">
+            <h2>Inventory Records</h2>
+            <table class="inventory-table">
+
+<thead>
+
+<tr>
+
+<th>Product</th>
+<th>Category</th>
+<th>Purchase</th>
+<th>Selling</th>
+<th>Stock</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="productTable">
+
+</tbody>
+
+</table>
+        </div>
+        <div class="inventory-card">
+            <h2>Stock Summary</h2>
+            <div class="summary-row">
+                <span>Total Products</span>
+                <span id="summaryProducts">0</span>
+            </div>
+            <div class="summary-row">
+                <span>Low Stock Items</span>
+                <span id="summaryLowStock">0</span>
+            </div>
+            <div class="summary-row total-row">
+                <span>Total Inventory Value</span>
+                <span id="summaryValue">₹0</span>
+                </div>
+                <div class="summary-row">
+    <span>Warehouse Locations</span>
+    <span>0</span>
+</div>
+
+<div class="summary-row">
+    <span>Products Expiring Soon</span>
+    <span>0</span>
+</div>
+            </div>
+        </div>
+        </main>
+    </div>
+    <script src="../scripts/dashboard.js"></script>
+    <script src="../scripts/inventory.js"></script>
+</body>
+</html>

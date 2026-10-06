@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendors | ERP Billing Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/vendors.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar">
+        <button class="close-sidebar" id="closeSidebar">
+                ❮
+            </button>
+        <div class="sidebar-logo">
+            <h2>ERP Billing</h2>
+            <p class="logo-tagline">
+                Admin Panel
+            </p>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li><a href="./admin-dashboard.html">Dashboard</a></li>
+            <li>
+                    <a href="category.html">
+                        Category
+                    </a>
+                </li>
+
+            <li><a href="./inventory.html">Add Products</a></li>
+
+            <li><a href="./sales.html">Sales</a></li>
+
+            <li><a href="./purchase.html">Purchase</a></li>
+
+            <li><a href="./customers.html">Customers</a></li>
+
+            <li class="active-menu">
+                <a href="./vendors.html">Vendors</a>
+            </li>
+
+            <li><a href="./reports.html">Reports</a></li>
+            <li>
+                    <a href="./expenses.html">
+                        Expenses
+                    </a>
+                </li>
+            <li><a href="./settings.html">Settings</a></li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <button class="mobile-menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+        <div class="vendors-container">     
+        <div class="vendors-header">
+            <h1>Vendor Management</h1>
+            <p>
+                Manage suppliers, vendors and procurement contacts.
+            </p>
+        </div>
+        <div class="vendors-card">
+            <h2>Add Vendor</h2>
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>Vendor Name</label>
+                    <input id="vendorName" type="text" placeholder="Vendor name">
+                </div>
+                <div class="input-group">
+                    <label>Contact Number</label>
+                    <input id="phone" type="tel" placeholder="Contact number">
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input id="email" type="email" placeholder="Email address">
+                </div>
+                <div class="input-group">
+                    <label>GST Number</label>
+                    <input id="gstNumber" type="text" placeholder="GST number">
+                </div>
+                <div class="input-group">
+                    <label>Vendor Address</label>
+                    <input id="address" type="text" placeholder="Vendor address">
+                </div>
+                <div class="input-group">
+                    <label>Vendor Type</label>
+                    <select>
+                        <option>Manufacturer</option>
+                        <option>Distributor</option>
+                        <option>Wholesaler</option>
+                        <option>Retail Supplier</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Vendor Category</label>
+                    <select>
+                        <option>Electronics</option>
+                        <option>Food Products</option>
+                        <option>Clothing</option>
+                        <option>Hardware</option>
+                        <option>General</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Vendor Status</label>
+                    <select>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                    </select>
+                </div>
+                <div class="input-group">
+    <label>Credit Limit</label>
+    <input type="number" placeholder="Credit limit amount">
+    </div>
+    <div class="button-wrapper">
+
+    <button type="button" id="saveVendorBtn" class="save-btn">
+        Save Vendor
+    </button>
+
+</div>   
+</div>
+            </div>
+        </div>
+        <div class="vendors-card">
+            <h2>Vendor Records</h2>
+            <div class="table-wrapper">
+            <table class="vendors-table">
+                <thead>
+                    <tr>
+                        <th>Vendor</th>
+                        <th>Contact</th>
+                        <th>Email</th>
+                        <th>GST Number</th>
+                        <th>Status</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody id="vendorTable">
+                    
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <div class="vendors-card">
+
+    <h2>Vendor Summary</h2>
+
+    <div class="summary-row">
+        <span>Total Vendors</span>
+        <span id="totalVendors">0</span>
+    </div>
+
+    <div class="summary-row">
+        <span>Active Vendors</span>
+        <span id="activeVendors">0</span>
+    </div>
+    <div class="summary-row">
+    <span>Inactive Vendors</span>
+    <span id="inactiveVendors">0</span>
+</div>
+<div class="summary-row">
+    <span>Credit Vendors</span>
+    <span id="creditVendors">0</span>
+</div>
+
+</div>
+    </div>
+    </main>
+    </div>
+    <script src="../scripts/dashboard.js"></script>
+    <script src="../scripts/vendors.js"></script>
+</body>
+</html>

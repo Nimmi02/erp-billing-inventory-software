@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account -ERP Billing & Inventory Software</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/register.css">
+</head>
+<body>
+    <section class="register-container">
+        <div class="register-box">
+            <div class="register-header">
+                <h2>Create Account</h2>
+                <p>
+                    Start managing billing, inventory and accounting with ERP Billing Software.
+                </p>
+            </div>
+            <form id="registerForm" class="register-form">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input id="fullName" type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="input-group">
+                    <label>Business Name</label>
+                    <input id="companyName" type="text" placeholder="Enter business name" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input id="email" type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label>Mobile Number</label>
+                    <input id="phone" type="tel" placeholder="Enter mobile number" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input id="password" type="password" placeholder="Create password" required>
+                </div>
+                 <div class="input-group">
+                    <label>Confirm Password</label>
+                    <input id="confirmPassword" type="password" placeholder="Confirm password" required>
+                </div>
+             <div class="verification-options">
+    <p class="verification-text">
+        Verify your account using
+    </p>
+    <div class="verify-buttons">
+        <button type="button" id="sendEmailOtpBtn" class="verify-option active-option">
+            Email Verification
+        </button>
+        <button type="button" id="mobileOtpBtn" class="verify-option">
+            Mobile OTP
+        </button>
+    </div>
+</div>
+<div class="input-group">
+
+    <input
+        type="text"
+        id="emailOtp"
+        placeholder="Enter Email OTP"
+        maxlength="6"
+        style="display:none;">
+
+</div>
+
+<div
+    id="verifyOtpContainer"
+    style="display:none;">
+
+    <button
+        type="button"
+        id="verifyEmailOtpBtn"
+        class="register-btn">
+
+        Verify OTP
+
+    </button>
+
+</div>
+                <button type="submit" class="register-btn">
+                    Create Account
+                </button>
+            </form>
+            <div class="signin-link">
+                <p>
+                    Already have an account?
+                    <a href="./login.html">Sign In</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="../scripts/register.js"></script>
+</body>
+</html>

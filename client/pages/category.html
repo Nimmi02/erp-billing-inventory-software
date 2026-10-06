@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Management | ERP Billing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/category.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="sidebar">
+
+        <button class="close-sidebar" id="closeSidebar">
+            ❮
+        </button>
+
+        <div class="sidebar-logo">
+            <h2>ERP Billing</h2>
+            <p class="logo-tagline">
+                Admin Panel
+            </p>
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="./admin-dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active-menu">
+                <a href="./category.html">
+                    Category
+                </a>
+            </li>
+
+            <li>
+                <a href="./inventory.html">
+                    Add Products
+                </a>
+            </li>
+
+            <li>
+                <a href="./sales.html">
+                    Sales
+                </a>
+            </li>
+
+            <li>
+                <a href="./purchase.html">
+                    Purchase
+                </a>
+            </li>
+
+            <li>
+                <a href="./customers.html">
+                    Customers
+                </a>
+            </li>
+
+            <li>
+                <a href="./vendors.html">
+                    Vendors
+                </a>
+            </li>
+
+            <li>
+                <a href="./reports.html">
+                    Reports
+                </a>
+            </li>
+            <li>
+                    <a href="./expenses.html">
+                        Expenses
+                    </a>
+                </li>
+            <li>
+                <a href="./settings.html">
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <button class="mobile-menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+        <div class="category-container">
+
+            <div class="category-header">
+                <h1>Category Management</h1>
+
+                <p>
+                    Create and manage product categories.
+                </p>
+            </div>
+
+            <div class="category-card">
+
+                <h2>Add New Category</h2>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label>Category Name</label>
+
+                        <input
+id="categoryName"
+type="text"
+placeholder="Enter category name">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Description</label>
+
+                        <input
+id="categoryDescription"
+type="text"
+placeholder="Enter description">
+                    </div>
+
+                </div>
+
+                <div class="button-wrapper">
+
+    <button
+type="button"
+id="saveCategoryBtn"
+class="primary-btn">
+        Save Category
+    </button>
+
+</div>
+
+            </div>
+
+            <div class="category-card">
+
+                <h2>Category Records</h2>
+
+                <table class="category-table">
+
+<thead>
+
+<tr>
+
+<th>Category</th>
+
+<th>Description</th>
+
+<th>Products</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="categoryTable">
+
+</tbody>
+
+</table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../scripts/dashboard.js"></script>
+<script src="../scripts/category.js"></script>
+</body>
+</html>
